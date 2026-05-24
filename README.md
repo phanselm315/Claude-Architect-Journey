@@ -8,9 +8,7 @@ milestones, and honest weekly notes.
 ---
 
 ## Who I Am
-CPA and problem solver. I run a one-man outsourced CFO/CCO advisory firm for emerging fund
-managers, serve as Treasurer for a nonprofit, stepped in as interim bookkeeper for a
-parish, and build trading systems on the side. I'm relentless about delivering for the
+CPA and problem solver. My background is in consulting for private equity and hedge funds, largely focused on process optimization and controls. I'm relentless about delivering for the
 people who depend on me — and I'm constitutionally incapable of leaving a broken process
 alone.
 
@@ -58,7 +56,7 @@ This is my public commitment to closing that gap.
 | 04 | [Business Prompt Library](./projects/04-business-prompt-library/)       | 1–2   | 6 production Claude skills: CFO/CCO advisory, SEC compliance, investment accounting, email drafting, website copy, resume       | Mar 2026     | ✅ Done    |
 | 05 | [Workforce Housing Analyzer](./projects/05-workforce-housing-analyzer/) | 2     | Iterative Excel + AI parcel analysis tool for Leelanau County land acquisition campaign (v3 → v102+)                           | Mar 2026     | 🔄 Active  |
 | 06 | [Kalshi Trading](./projects/06-kalshi-trading/)                         | 2–3   | Academic paper → trading bot → research finding: live paper-trading and a 1,274-market calibration study showed Kalshi's BTC binaries are well-calibrated with no directional edge — now writing up the result | Apr 2, 2026  | 🔄 Active  |
-| 07 | [Obsidian Second Brain](./projects/07-obsidian-second-brain/)           | 2     | Knowledge system using Obsidian + Web Clipper for research capture; dedicated Sunday writing practice; AI-assisted note-making  | Apr 13, 2026 | 🔄 Active  |
+| 07 | [Obsidian Second Brain](./projects/07-obsidian-second-brain/)           | 2–3   | Knowledge system on Obsidian — now a working synthesis engine: standardized capture templates (Web Clipper, YouTube transcripts) feed Claude-assisted synthesized writing and densely linked maps of content | Apr 13, 2026 | 🔄 Active  |
 | 08 | [Aether Advisors](./projects/08-aether-advisors/)                       | 2–3   | AI-powered marketing company build: AI image generation, marketing program design, brand strategy                               | Apr 23, 2026 | 🔄 Active  |
 | 09 | [Monthly Financials Builder](./projects/09-monthly-financials-builder/) | 2–3   | Python CLI: auto-assembles board financial package (cover page, donations PDF, expenses, bank statements) from QBO exports      | Apr 23, 2026 | ✅ Done    |
 | 10 | [Email Eval Framework](./projects/10-email-eval-framework/)             | 3     | HTML evaluation system for scoring AI-drafted community emails against strict brand voice rules                                 | Apr 2026     | ✅ Done    |
@@ -84,7 +82,7 @@ This is my public commitment to closing that gap.
 First high-stakes Claude use: worked through a full personal tax filing using Free Tax USA
 with Claude as a co-pilot — looking up deductions, interpreting edge cases, checking my
 logic. Not a "project" in the traditional sense, but the experience that showed me Claude
-could handle real professional work, not just demos.
+could handle real professional work with the right guidance, not just demos.
 
 **Week 1 (Mar 9)**
 Shipped the first API call — a six-line Node.js script that hit Claude Haiku and got a
@@ -119,21 +117,23 @@ Started as an academic research paper, became a live trading bot on Kalshi — t
 prediction market platform. The model is trained to find a signal edge on Bitcoin contracts
 and short-dated options. Currently in ML training.
 
-**Obsidian Second Brain (Apr 13)**
-Set up Obsidian with Web Clipper for capturing research, articles, and notes. Committed to
-writing every Sunday. AI-assisted note organization and synthesis.
+**Obsidian Second Brain (Apr 13 → ongoing)**
+Started as Obsidian + Web Clipper for capturing research, articles, and notes, with a
+Sunday writing practice. Has since matured into a working synthesis engine — standardized
+capture templates, including a new YouTube transcript template, feed Claude-assisted
+synthesis on two fronts: synthesized writing and densely linked maps of content.
 
 **Aether Advisors + Monthly Financials Builder (Apr 23)**
 Two projects launched the same day. Aether Advisors: building the AI infrastructure for
 my wife's marketing company — image generation, marketing program design, brand strategy.
 Monthly Financials Builder: Python CLI that takes raw QBO exports and assembles a complete
-board financial package with one command. Now used every month for a nonprofit I Treasurer.
+board financial package with one command. Now used every month for a nonprofit I am Treasurer for.
 
 Key lesson: not every automation needs AI. This one is mostly deterministic — and that's
 the right call.
 
 **Email Eval Framework (Apr 2026)**
-HTML scoring system for reviewing AI-drafted community emails against SBGC's strict brand
+HTML scoring system for reviewing AI-drafted community emails against non-profit's strict brand
 voice and terminology rules. First structured evaluation layer.
 
 ---
@@ -198,7 +198,7 @@ integration. Next up is a multi-day live paper-trading week starting May 26 — 
 record that becomes the project's research paper.
 
 **Grok Brain Export (May 2026)**
-Exporting and cleaning Grok AI conversation history and outputs for structured integration
+Exporting and cleaning Grok AI conversation history since 2025 and outputs for structured integration
 into the Obsidian second brain — turning raw AI interaction history into searchable,
 linked knowledge.
 

@@ -27,7 +27,7 @@ runtime at the same time. Python came later once the API behavior was understood
 ## Lessons Learned
 
 The first call works in about 10 minutes. The interesting work starts the moment you ask:
-*what do I actually want to build with this?* Every project after this one is the answer
+*what do I want to build with this?* Every project after this one is the answer
 to that question.
 
 ---

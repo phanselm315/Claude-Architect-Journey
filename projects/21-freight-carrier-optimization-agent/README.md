@@ -19,7 +19,7 @@ The agent works in two parts:
 
 - **Part 1 — Single-portco diagnostic.** Re-prices every shipment against live carrier
   rates — parcel through EasyPost, LTL through Warp Freight — and benchmarks each against
-  what unmanaged, plant-by-plant booking actually paid. Savings are decomposed lever by
+  what unmanaged, plant-by-plant booking paid. Savings are decomposed lever by
   lever: carrier mix, mode selection, shipment consolidation, and expedited-freight
   reduction. The result rolls into an EBITDA bridge with downside / base / upside
   flow-through, a sensitivity table, and a one-page carrier negotiation scorecard.
@@ -63,8 +63,11 @@ actual work.
 
 Deterministic math with a narrow, single-purpose LLM layer is the trustworthy shape for a
 finance tool — the same boundary that makes the
-[Working Capital Agent](../20-working-capital-agent/) (Project 20) credible. These two are
-sibling projects: one repeatable value-creation lever each, built for the same fund.
+[Working Capital Agent](../20-working-capital-agent/) (Project 20),
+[Inventory Intelligence Agent](../22-inventory-intelligence-agent/) (Project 22), and
+[Procurement Spend Intelligence Agent](../23-procurement-spend-intelligence-agent/) (Project 23)
+credible. Together, the four agents cover the cash conversion cycle and the largest
+controllable cost lines in a PE portfolio.
 
 ---
 

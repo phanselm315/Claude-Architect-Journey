@@ -5,8 +5,8 @@
 
 ## What This Is
 
-A knowledge management system built on Obsidian — and, increasingly, a working synthesis
-engine rather than just a capture vault. Research, articles, and video content come in
+A knowledge management system built on Obsidian — now a working synthesis engine
+rather than just a capture vault. Research, articles, and video content come in
 through standardized templates; Claude helps turn them into synthesized writing and a
 densely linked web of notes. Capture was the first phase. Synthesis is now the main event.
 

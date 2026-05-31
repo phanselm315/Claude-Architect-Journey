@@ -41,7 +41,7 @@ the job.
 ## Lessons Learned
 
 Not every automation needs AI. The instinct when building AI systems is to add AI to
-everything. That's wrong. Deterministic problems deserve deterministic solutions — they're
+everything. That's wrong. Deterministic problems deserve deterministic code — it's
 faster, cheaper, and more reliable.
 
 The most satisfying part of this project: a task that used to take 45 minutes of

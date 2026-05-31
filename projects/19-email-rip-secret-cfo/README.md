@@ -31,7 +31,7 @@ useless. The value is in synthesis: what frameworks appear repeatedly? What prin
 show up across different topics? That requires reasoning over the full corpus, not
 per-document summarization.
 
-**Structured output over notes.** The goal is a reference library you'd actually use,
+**Structured output over notes.** The goal is a reference library you'd use,
 not a collection of AI-generated summaries. Output is organized into topic categories
 with cross-references — designed for retrieval, not archiving.
 

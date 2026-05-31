@@ -57,7 +57,7 @@ time than the last. Poorly structured systems mean each client adds a full linea
 
 Building the skills first, before client pressure created shortcuts, produced a
 significantly better result. The discipline to build the right foundation before
-generating revenue is the difference between a scalable practice and a busy job.
+generating revenue is the difference between a practice that compounds and a busy job.
 
 ---
 

@@ -42,7 +42,7 @@ Evaluation frameworks are underbuilt in most AI workflows. People spend time on 
 generation side and almost none on the measurement side. The result is inconsistent
 output that slowly erodes trust in the AI layer.
 
-Explicit rules also force clarity about what the brand voice actually *is*. The process
+Explicit rules force clarity about what the brand voice *is*. The process
 of building the scoring rubric surfaced several cases where the style guidelines were
 ambiguous or contradictory — and those got resolved before they became recurring problems.
 

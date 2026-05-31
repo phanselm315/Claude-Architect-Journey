@@ -15,7 +15,7 @@ alone.
 The last time a technology hit me like this was 1998. Grade school. Our family got a
 computer and AOL for the first time. That same feeling — *the world just changed and I need
 to understand everything about it* — is exactly what happened when I started building
-seriously with Claude. Except now I know enough from my education and day job to actually build something useful.
+seriously with Claude. Except now I know enough from my education and day job to build something useful.
 
 ---
 
@@ -38,11 +38,11 @@ This is my public commitment to closing that gap.
 | 1     | **Foundation** — Prompt engineering, first API calls, daily tools           | First working API script + system prompt library                 | ✅      |
 | 2     | **Master the API** — CLI tools, PDF automation, eval frameworks             | 3 production CLI tools in active use                             | ✅      |
 | 3     | **Tools & Agents** — Web scraping, external APIs, data pipelines            | Scraper-agent + parish bookkeeping system + fraud finder         | 🔄 ← Current (May 2026) |
-| 4     | **Real Products** — Apps used by real people in real life                   | Family Flow App + Wacker Advisors OS live                        | ⬜      |
+| 4     | **Real Products** — Apps used by real people in real life                   | Family Flow App + Wacker Advisors OS + four-agent PE value-creation suite | 🔄      |
 | 5     | **Advanced Architecture** — Multi-agent, ML training, trading systems       | 007 agent live paper run · Kalshi calibration study               | 🔄      |
 | 6     | **Reputation & Income** — Portfolio, outreach, first paid project           | First paid Claude build + public portfolio                       | ⬜      |
 
-> **Note:** Month 3 work includes early builds of roadmap Months 4 & 5 — Family Flow, Wacker Advisors OS, the 007 Trading Agent, Kalshi, and two portfolio-company value-creation agents are all running ahead of schedule.
+> **Note:** Month 3 work includes early builds of roadmap Months 4 & 5 — Family Flow, Wacker Advisors OS, the 007 Trading Agent, Kalshi, and a four-agent portfolio-company value-creation suite are all running ahead of schedule.
 
 ---
 
@@ -71,6 +71,8 @@ This is my public commitment to closing that gap.
 | 19 | [Email Rip — Secret CFO](./projects/19-email-rip-secret-cfo/)           | 3     | Email content scraper and Claude analysis pipeline — extracting, categorizing, and synthesizing the Secret CFO newsletter archive | May 2026     | 🔄 Active  |
 | 20 | [Working Capital Agent](./projects/20-working-capital-agent/)           | 3–4   | Agentic accounts-receivable diagnostic + collections tool for PE portfolios: deterministic trapped-cash analysis, customer segmentation, Claude-drafted collection emails behind a human approval queue, and a fund-level treasury rollup | May 22, 2026 | 🔄 Active  |
 | 21 | [Freight Carrier Optimization Agent](./projects/21-freight-carrier-optimization-agent/) | 3–4 | Agent that re-prices a manufacturer's shipment history against live carrier rates, decomposes freight savings lever by lever, and rolls a single-portco EBITDA bridge up to a fund-level value-creation play | May 22, 2026 | 🔄 Active  |
+| 22 | [Inventory Intelligence Agent](./projects/22-inventory-intelligence-agent/) | 3–4 | Agent that segments a distributor's catalog by ABC × XYZ, sizes variability-driven safety stock and EOQ cycle stock, surfaces dead SKUs and the long tail, and rolls a single-portco working-capital release up to a fund-wide √N pooling play | May 2026     | 🔄 Active  |
+| 23 | [Procurement Spend Intelligence Agent](./projects/23-procurement-spend-intelligence-agent/) | 3–4 | Agent that cleans the vendor master, classifies spend by category, surfaces tail / maverick / concentration risk, and rolls per-portco procurement savings up to a fund-wide negotiation playbook | May 2026     | 🔄 Active  |
 
 ---
 
@@ -223,6 +225,23 @@ the same play across a whole fund. Deterministic math, one narrow LLM step for t
 negotiation scorecard, a Streamlit app and a Jupyter walkthrough off a single codebase.
 Public on GitHub.
 
+**Inventory Intelligence Agent (May 2026) — Ahead of roadmap**
+Third in the portfolio value-creation suite. Point it at a distributor's inventory
+snapshot and 24 months of demand; it segments the catalog ABC × XYZ, sizes
+variability-driven safety stock and EOQ cycle stock, surfaces the dead SKUs and the long
+tail trapping working capital, and rolls a single-portco diagnostic up to a fund-wide
+pooling play using the classical √N bound. Cross-agent guardrails so it doesn't
+double-count what the Freight, Procurement, and Working Capital agents already own.
+Public on GitHub.
+
+**Procurement Spend Intelligence Agent (May 2026) — Ahead of roadmap**
+Fourth in the suite, and the one where fund-level leverage matters most. Cleans the
+vendor master with rapidfuzz, classifies spend into a 10-category taxonomy, surfaces tail
+and maverick spend at the portco level, then builds a unified fund-wide spend cube and
+prices cross-portco vendor consolidation against tier-break benchmarks. Output is a
+category-by-category negotiation playbook an operating partner can take into a kickoff
+meeting the next day. Public on GitHub.
+
 ---
 
 ### Month 4: Real Products
@@ -257,9 +276,9 @@ Public on GitHub.
 ## About
 **Starting point:** Basic Python; no prior API or agent experience  
 **Domain:** Finance, compliance, private-equity value creation, nonprofit ops, household automation, and trading  
-**Goal:** 21 projects across 6 months. Document the journey publicly. Build a portfolio
+**Goal:** 23 projects across 6 months. Document the work publicly. Build a portfolio
 that shows what's possible when you use Claude as an actual engineering partner, not a chatbot.
 
 ---
 
-*Started: March 1, 2026 · Updated: May 23, 2026*
+*Started: March 1, 2026 · Updated: May 29, 2026*

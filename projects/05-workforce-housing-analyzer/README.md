@@ -39,7 +39,7 @@ the user already has.
 
 **Iterative versioning over "final" releases.** Land acquisition analysis evolves as
 criteria sharpen. v102 is better than v1 because 101 rounds of feedback refined what
-actually matters. Treating each iteration as a version rather than an overwrite preserves
+matters. Treating each iteration as a version rather than an overwrite preserves
 the reasoning history.
 
 ## Lessons Learned

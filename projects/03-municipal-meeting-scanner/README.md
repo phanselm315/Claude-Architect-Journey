@@ -33,7 +33,7 @@ have been overkill and 5x the cost for the same output.
 
 **HTML output over CSV or JSON.** The consumer of this report is a human doing a weekly
 scan. HTML renders immediately, is shareable, and requires no tooling to read. Keep the
-output format matched to how it will actually be used.
+output format matched to how it will be used.
 
 ## Lessons Learned
 

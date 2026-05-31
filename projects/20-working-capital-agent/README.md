@@ -46,7 +46,7 @@ Nothing is sendable until someone signs off.
 cost cut becomes a repeatable, fund-level value-creation lever.
 
 **Synthetic, but production-grade.** A fictional fund and synthetic data, but the input
-CSVs deliberately mirror what NetSuite, QuickBooks, or Sage actually export — pointing the
+CSVs deliberately mirror what NetSuite, QuickBooks, or Sage export — pointing the
 agent at a real company is a column-mapping exercise, not a rebuild.
 
 ## Lessons Learned
@@ -59,8 +59,11 @@ A diagnostic is only half the job. The value is in the standing process — re-r
 every aging refresh and a one-time consulting deck becomes an always-on collections
 workflow.
 
-Sibling project to the [Freight Carrier Optimization Agent](../21-freight-carrier-optimization-agent/)
-(Project 21) — same value-creation thesis, applied to a different trapped-cash line.
+Sibling to the [Freight Carrier Optimization Agent](../21-freight-carrier-optimization-agent/)
+(Project 21), [Inventory Intelligence Agent](../22-inventory-intelligence-agent/)
+(Project 22), and [Procurement Spend Intelligence Agent](../23-procurement-spend-intelligence-agent/)
+(Project 23) — the four-agent suite covers the cash conversion cycle and the largest
+controllable cost lines in a PE portfolio.
 
 ---
 

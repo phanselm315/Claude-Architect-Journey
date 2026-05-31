@@ -25,7 +25,7 @@ serious agentic pipeline in the portfolio.
 - **Output:** Flagged relationship maps with supporting data citations
 
 **Agentic pattern:** Search → parse → correlate → flag. Each stage feeds the next.
-Claude handles the reasoning layer (what's actually suspicious vs. coincidental); code
+Claude handles the reasoning layer (what's suspicious vs. coincidental); code
 handles data extraction and normalization.
 
 ## Key Decisions

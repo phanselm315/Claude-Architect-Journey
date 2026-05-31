@@ -26,7 +26,7 @@ Supabase-backed cash flow predictor. Built for real daily use by my family.
 
 **Reverse-engineer the grocery API rather than build a scraper.** The grocery chain has
 no public API. The options were: scrape the website (brittle, slow, breaks on layout
-changes) or figure out what the app is actually calling. Claude Code analyzed browser
+changes) or figure out what the app is calling. Claude Code analyzed browser
 network traffic to infer the endpoint structure, parameter patterns, and auth behavior.
 The result is a proper API wrapper that calls the same endpoints the app uses — faster
 and more reliable than scraping.
@@ -38,7 +38,7 @@ justified by the feature requirements.
 
 **Build for the actual users, not for the demo.** The primary end user for most of these
 features is my wife. Every UI and workflow decision gets validated against whether she'll
-actually use it, not whether it's technically elegant.
+use it, not whether it's technically elegant.
 
 ## Lessons Learned
 

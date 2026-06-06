@@ -58,6 +58,12 @@ The AI layer earns its keep finding non-obvious connections between notes captur
 apart — the linking a human wouldn't do by hand, but that produces real insight when
 surfaced.
 
+The vault's stock-idea track grew into its own project — the
+[Twitter Stock Research Pipeline](../24-twitter-stock-research/) (Project 24) — and is
+now the vault's fastest-growing area, with trend analysis layered on top of the ticker
+tracker. Synthesis volume keeps climbing alongside it: new synthesized essays and maps
+of content landing through early June 2026.
+
 ---
 
 *Part of the [Claude Architect Journey](../../README.md)*

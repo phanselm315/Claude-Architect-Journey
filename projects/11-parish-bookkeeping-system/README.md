@@ -41,6 +41,12 @@ That distinction matters for institutional work where accuracy is non-negotiable
 The manual had to be written at a level where someone with basic bookkeeping skills could
 execute every process without needing to understand the accounting theory behind it.
 
+## Current Milestone
+
+June 2026: the parish hired a full-time bookkeeper. The handoff ran on a quick-summary
+package assembled from the Claude-drafted process documentation — the payoff for
+documenting first. Remaining work is supporting the transition.
+
 ## Lessons Learned
 
 Institutional knowledge is fragile. One departure and 30 years of process logic disappears.

@@ -52,11 +52,13 @@ in the output, so a flattering number can't pass review unchallenged.
 ## Current Milestone
 
 Roughly twenty hardening sprints in, the infrastructure the whole build was for is done.
-The next step is a multi-day live paper-trading run against a real Alpaca paper account —
-five sessions starting May 26, 2026. That track record — with a buy-and-hold benchmark and
-per-decision data-freshness evidence — becomes the results section of a research paper
-modeled on the original TradingAgents paper. The system is HOLD-biased by design; a flat
-or zero-trade week is recorded honestly as a result, not patched into a better-looking one.
+The multi-day live paper-trading run against a real Alpaca paper account began May 26,
+2026 and is still going as of June 6 — live data and trading testing, extended past the
+original five-session plan to build a longer record. That track record — with a
+buy-and-hold benchmark and per-decision data-freshness evidence — becomes the results
+section of a research paper modeled on the original TradingAgents paper. The system is
+HOLD-biased by design; a flat or zero-trade week is recorded honestly as a result, not
+patched into a better-looking one.
 
 ## Lessons Learned
 

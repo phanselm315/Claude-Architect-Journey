@@ -21,7 +21,9 @@ letters, and quarterly reports. Infrastructure is production-ready.
 - **Financial layer:** QuickBooks Online integration, automated invoicing on 1st of month
 
 **Claude skills deployed:**
-- `pch-advisory` — full COO/CFO operations, session-aware with persistent context files
+- Root `CLAUDE.md` operating layer — full COO/CFO operations with persistent context
+  files, auto-loaded every session (replaced the `pch-advisory` master skill May 2026
+  after skills proved to under-trigger)
 - `regpartner` — SEC compliance expert (Form ADV, Form PF, Marketing Rule, Custody Rule)
 - `invcogaap` — ASC 946 investment company accounting
 - `website-copy` — brand voice-compliant public content
@@ -48,6 +50,14 @@ associates. The marketing and documents reflect this explicitly.
 **Compliance calendar as the backbone.** For fund manager clients, missing a regulatory
 deadline is catastrophic. The compliance calendar is automated with 60-day advance
 alerts and is the first thing built for every new client engagement.
+
+## Current Milestone
+
+Repositioned May 28, 2026: the firm is now an AI-native fractional CFO + CCO practice
+serving four client profiles — emerging fund managers and family offices, independent
+sponsors and search funds, PE/VC portfolio companies, and owner-operated private
+businesses. The v2 website shell reflecting the new positioning was built June 1;
+publishing it is the gate to first-client outreach (target July 2026).
 
 ## Lessons Learned
 

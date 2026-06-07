@@ -336,10 +336,10 @@ research finding. Project 06 marked ✅ Done.
 ---
 
 ## Stack
-- **Languages:** JavaScript / Node.js · Python
+- **Languages:** JavaScript / Node.js · Python · HTML/CSS
 - **Models:** Claude Haiku (scraping/summarization) · Claude Sonnet (reasoning, drafting, agents)
 - **Key libraries:** `@anthropic-ai/sdk` · Playwright · pandas · numpy · scikit-learn · rapidfuzz · Pydantic · yfinance · openpyxl · ReportLab · pypdf
-- **Tools:** Obsidian + Web Clipper · Claude Code · Cowork · GitHub · QuickBooks Online · Plaid · Supabase · Kalshi · Alpaca · Financial Modeling Prep (MCP) · EasyPost · Streamlit · Plotly · Jupyter
+- **Tools:** Obsidian + Web Clipper · Claude Code · Cowork · GitHub · QuickBooks Online · Plaid · Supabase · Kalshi · Alpaca · Financial Modeling Prep (MCP) · EasyPost · Warp Freight · Excel · Streamlit · Plotly · Jupyter
 
 ---
 

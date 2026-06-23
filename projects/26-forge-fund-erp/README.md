@@ -1,6 +1,6 @@
 # Forge — AI-Native Fund Accounting ERP
 
-**Status:** 🔄 Active  
+**Status:** 🔄 Active — working demo shipped; now through ASC 946 statements  
 **Started:** June 3, 2026  
 **Code:** Private build — details deliberately high-level here  
 
@@ -38,9 +38,27 @@ The build process is the story I can tell publicly. A two-tier Claude workflow:
 - **Persistent project memory.** A living lessons-learned file where every gotcha and
   every binding decision gets logged, so no session starts from zero.
 
-Eleven build phases planned and largely executed in roughly two days of build time, with
-the test suite (150+ passing tests, strict type-checking across the codebase) holding the
-line throughout. The build is mid-flight; first working demo targeted for June 8, 2026.
+Fifteen-plus build phases planned and executed across the run, with
+the test suite (~140 passing tests, strict type-checking across the codebase) holding the
+line throughout. The first working demo landed on schedule in early June; the build has since pushed past the demo into the accounting engines themselves.
+
+## Current Milestone
+
+The demo is real and running: sign in, then an LP-to-portfolio-company drill-in that
+computes indirect ownership exposure deterministically from the event log, plus per-fund
+browse. Since that first demo, the build has added the engines that make it an accounting
+system rather than a graph:
+
+- **Distribution-waterfall engine** — tiered GP/LP economics computed straight from the log.
+- **Statement renderers and ASC 946 financial statements** — Statement of Assets &
+  Liabilities, Statement of Operations, Schedule of Investments, and Financial Highlights,
+  generated from the FactSet.
+- **`verify-reproducibility`** — replays every fund's signed, hash-chained log and proves
+  the projection-state hash byte-for-byte against the issued attestation, so tampering or
+  drift is detectable after the fact.
+
+Next: the valuation-judgment wedge — making each mark's rationale a signed, permanent part
+of the record — and per-LP statement fan-out from the dimensioned allocation lines.
 
 ## Key Decisions
 

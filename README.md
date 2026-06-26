@@ -48,6 +48,12 @@ compounded. Over six months my unit of work kept moving up a level of abstractio
    loops where the *process* of building is itself an orchestrated system, not a person
    running a checklist.
 
+The shift that ties it together: I've stopped being the loop *operator* and become the loop
+*designer*. The job isn't to run loops faster — it's to decide which loops exist, what each
+one is for, and how they hand off; then to monitor them as they run and tweak the ones that
+drift; and to keep the context they run against clean enough that each run leaves the next
+one better. A planned portfolio of loops I design, watch, and tune — not a bag of tricks.
+
 The next move is the meta one: take every lesson from the Forge build and from my own
 machine setup, synthesize them, and stand up a reusable **AI engineering team** in Claude
 Code — then point it at the next project. Lessons stop being trapped inside one build and
@@ -56,19 +62,20 @@ thing," but "I built the system that builds the things, and it gets better every
 
 ### Where This Is Headed
 
-*A light read of the tea leaves — to be sharpened against my own synthesis notes (Nate
-Jones and others) once they're in.*
+*My read of the tea leaves — light, and held loosely.*
 
-The leverage is moving from the model to the **orchestration around it**. Models are
-becoming a commodity input; the durable edge is the ability to design loops-of-loops, encode
-real domain judgment into them, and make the output *provable* rather than merely plausible.
-The people who win this next phase won't be the ones with access to the best model — everyone
-will have that. They'll be the ones who can turn their own expertise into a system that runs
-without them, and prove it was right. Reproducibility and taste become the moat. That's the
+The leverage is moving off the model and onto the **system around it**. Models are becoming a
+commodity input; everyone will have a good one. The durable edge is the implementation layer
+— the workflow design, the authority limits, the evals and audit trails — wrapped around a
+context store that gets richer every cycle instead of sitting still. Three things I keep
+betting on: the unit of work has climbed from the prompt to a designed portfolio of loops,
+and the scarce skill is now designing and tuning them, not running them; the moat isn't
+intelligence but the compounding context and judgment you've encoded into the system — the
+part that doesn't commoditize when the model does; and proof is the product — "done isn't
+done" until the output is provable, not merely plausible, which is the entire reason Forge
+exists. Put it together and the people who win this next phase are the ones who can turn
+their own expertise into a system that runs without them — and prove it was right. That's the
 bet the whole portfolio is built on, and where I think everything is going.
-
-> **Note to self / Claude:** this prophecy is deliberately light. Drop the relevant Second
-> Brain synthesis notes here and I'll rewrite it in your voice, grounded in the actual reading.
 
 ---
 
@@ -333,13 +340,4 @@ A full pass across the open board:
   extended past the original five-session plan to build a longer record.
 - **Taste Interview (25)**: completed June 7, 2026. All 100 questions, output saved to the
   Obsidian vault. Checkpointing did its job.
-- **Twitter Stock Research (24)**: new trend-analysis layer: crossing crowdsourced
-  conviction from X against bulge-bracket sell-side research (via Schwab) in the vault's
-  Stock Research track.
-- **Wacker Advisors OS (16)**: firm repositioned May 28 as an AI-native fractional
-  CFO + CCO practice across four client profiles; v2 website shell built June 1.
-  Publishing is the gate to first-client outreach.
-- **Parish Bookkeeping (11)**: the parish hired a full-time bookkeeper; handoff ran on
-  a summary package built from the Claude-drafted documentation.
-- **Obsidian Second Brain (07)**: synthesis volume still climbing; the Stock Research
-  track is now the vault's fastest-growing area.
+- **Twitter Stock Research (24)**

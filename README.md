@@ -380,19 +380,115 @@ type-checking. Every hard problem so far has been an accounting judgment or a
 process-design question, not a coding question. Code private; this one might be a
 product.
 
-**Status sweep (Jun 6)**
-A full pass across the open board:
-- **Forge (26)**: mid-build; first working demo targeted for June 8.
-- **007 Trading Agent (17)**: the live paper run that started May 26 is still going,
-  extended past the original five-session plan to build a longer record.
-- **Taste Interview (25)**: completed June 7, 2026. All 100 questions, output saved to the
-  Obsidian vault. Checkpointing did its job.
-- **Twitter Stock Research (24)**: new trend-analysis layer: crossing crowdsourced
-  conviction from X against bulge-bracket sell-side research (via Schwab) in the vault's
-  Stock Research track.
-- **Wacker Advisors OS (16)**: firm repositioned May 28 as an AI-native fractional
-  CFO + CCO practice across four client profiles; v2 website shell built June 1.
-  Publishing is the gate to first-client outreach.
-- **Parish Bookkeeping (11)**: the parish hired a full-time bookkeeper; handoff ran on
-  a summary package built from the Claude-drafted documentation.
-- **Obsidian Second Brain (07)**: synthesis volume
+**Kalshi Trading: Published (Jun 6)**
+The negative result became a paper: *"Are Bitcoin Daily Binary Prediction Markets
+Efficient? Calibration Evidence from 1,274 Settled Kalshi Contracts and a Live
+Out-of-Sample Trading Experiment"*, now on
+[SSRN](https://ssrn.com/abstract=6891438). The project that started April 2 as an
+academic question, became a live trading bot, and found no edge, closes as a published
+research finding. Project 06 marked ✅ Done.
+
+**Status sweep (Jun 23)**
+- **Forge (26)**: the demo I targeted for June 8 landed, and the build kept going. Since
+  then: a distribution-waterfall engine, statement renderers, and ASC 946 financial
+  statements (Statement of Assets & Liabilities, Operations, Schedule of Investments,
+  Financial Highlights) generated from the FactSet, plus `verify-reproducibility` proving
+  each fund's signed log replays byte-for-byte against its attestation. ~140 tests green.
+  Next up is the valuation-judgment wedge. Full write-up on the project page.
+
+**Status sweep (Jun 25)**
+- **Forge (26)**: core is published and at rest — `main` equals `origin/main`, CI green,
+  and all five fund anchors replay byte-identical. Recent sessions closed backlog cleanly
+  rather than opening new ground: LP self-service (own class economics + a quarterly LP
+  report), a real web-build gate in CI, toolchain bumps, and a Next.js security patch.
+  Next, deferred to its own checkpointed session, is byte-exact seed surgery to fold a
+  fund's reapply step into the seed. Strategic frame now explicit: Forge is the
+  reproducible layer-1 of a three-layer "company brain," sold to GPs through Wacker, with
+  pricing tied to provable correctness.
+- **Twitter Stock Research (24)**: added more tickers and began measuring returns by
+  sector — watch-list sectors against everything else — to see where the bookmarked crowd
+  clusters versus where performance actually is. Expanding the analysis next.
+- **SBGC CLT — STORM (27, new)**: tested STORM and Co-STORM over a built corpus to review
+  a community group's community-land-trust research. First run underdelivered — I anchored
+  the synthesis on a single referenced doc, which narrowed and biased the output away from
+  what the multi-perspective method is for. Logged as a useful negative result; rebuild is
+  to feed a broader, balanced corpus and re-run both passes.
+
+**Sass Factory: a gated software factory (Jun 25 → ongoing)**
+The Arc's next rung, built. A control plane spawns sandboxed coding agents at a repo and
+streams their work live; the "reap" gates every change at the merge boundary — deterministic
+`check-all` (ruff, mypy strict, a coverage ratchet, duplicate-code) as gate 1, and an
+adversarial review agent that reads the diff and votes merge/block as gate 2 — then proposes
+a PR rather than self-merging. It fuses Warren's live observability (Jaymin West's
+open-source control plane, credited) with Forge's review-governs-the-plan discipline, built
+clean-room. Within days it was self-advancing: a backlog driver runs each deliverable through
+a headless agent, gates it, commits on green, and moves to the next — and it is now dogfooding
+by building its own backlog through its own control plane. This is the realized version of
+the Arc's old aspirational "next move."
+
+**Status sweep (Jun 27)**
+- **Sass Factory (28, new)**: the reusable, self-advancing software factory above is built
+  and dogfooding — and it pushes The Arc to a 7th rung (a factory that builds, reviews,
+  tests, and ships software end to end, currently building itself).
+- **Repo rebranded → "AI Architect Journey."** The work has gone multi-model — Grok for the
+  trading-agent and brain-export tracks, with local/open models (Ollama, Kimi) being added —
+  so the name and the Tools Used section now reflect that, with Claude still predominant.
+- **Forge (26)**: the deferred byte-exact seed surgery shipped (Jun 26) — a clean `make demo`
+  now natively emits a fund's canonical 141-event log with **zero event bytes changed**, and
+  the dead reapply path is retired. The one-way door went through without breaking
+  byte-identity. Now in progress: attesting per-class LP economics, which meant re-baselining
+  the seed and re-pinning anchors; suite is ~580 tests, adversarial skeptic 7/7 green, paused
+  at a checkpoint awaiting my merge go. A reseed checkpoint hit a hard stop on a misread the
+  skeptic caught — the gate working as designed.
+- **Wacker Advisors OS (16)**: now running on live consultancy work rather than waiting in
+  the wings; website launch impending.
+- **Twitter Stock Research (24)**: watch list keeps growing as bookmarks accumulate;
+  expanding the sector-return analysis on the larger set is next.
+
+### Month 5: Advanced Architecture
+*Roadmap phase. Work started early (see Month 3 above).*
+
+### Month 6: Reputation & Income
+*Not started*
+
+---
+
+## Resources
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+- [Interactive Prompt Tutorial (GitHub)](https://github.com/anthropics/prompt-eng-interactive-tutorial)
+- [Getting Started with the API](https://docs.anthropic.com/en/docs/initial-setup)
+- [Tool Use Guide](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)
+- [Anthropic Academy (Skilljar)](https://anthropic.skilljar.com)
+- [Building Effective Agents](https://docs.anthropic.com/en/docs/agents-and-tools/overview)
+
+---
+
+## Tools Used
+- **Models (LLMs):** Claude — predominant (Haiku for scraping/summarization, Sonnet for reasoning, drafting, agents) · Grok (trading-agent research, brain export) · exploring local + open models (Ollama, Kimi)
+- **Languages:** JavaScript / Node.js · Python · HTML/CSS
+- **Platforms & infra:** Vercel · Supabase · Streamlit · GitHub · Claude Code · Cowork · Obsidian + Web Clipper · Jupyter · Excel
+- **Interfaces:** REST APIs · MCP servers · custom Claude skills
+- **Data & finance APIs:** QuickBooks Online · Plaid · Financial Modeling Prep (MCP) · Kalshi · Alpaca · EasyPost · Warp Freight
+- **Key libraries:** `@anthropic-ai/sdk` · Playwright · pandas · numpy · scikit-learn · rapidfuzz · Pydantic · yfinance · openpyxl · ReportLab · pypdf · Plotly
+
+---
+
+## About
+**Starting point:** Basic Python; no prior API or agent experience  
+**Domain:** Finance, compliance, private-equity value creation, nonprofit ops, household automation, and trading  
+**Goal:** Over 6 months, build a portfolio that shows what's possible when you use AI
+as an actual engineering partner, not a chatbot. Document the work publicly.
+
+---
+
+## Let's Talk
+
+I'm open to conversations on AI-native finance systems, vertical agent implementations for
+private equity and asset management, finance transformation leadership roles, and advisory
+work.
+
+[LinkedIn](https://www.linkedin.com/in/peter-c-hanselmann-cpa/) · phanselm315@gmail.com
+
+---
+
+*Started: March 1, 2026 · Updated: June 27, 2026*

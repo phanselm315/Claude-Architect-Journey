@@ -9,12 +9,26 @@ milestones, and weekly notes.
 ---
 
 ## Who I Am
-CPA and problem solver. My background is in consulting for private equity and hedge funds, largely focused on process optimization and controls. I'm relentless about delivering for the people who depend on me. I won't leave a broken process alone.
+CPA and finance transformation leader with 15+ years in private equity and hedge fund
+operations — focused on process optimization, systems implementation, and controls. I've
+led large-scale platform migrations and built scalable reporting and compliance
+infrastructure for hundreds of funds, including a ~$9M operations platform migration that
+cut manual effort ~70% and saved ~$8M, and the operational stand-up behind a $150M fund
+launch. Notre Dame (Mendoza) BBA/MSA; Illinois CPA.
 
-The last time a technology hit me like this was in 1998 when our family got a
-computer and AOL for the first time. That same feeling (*the world just changed and I need
-to understand everything about it*) is exactly what happened when I started building
-seriously with Claude. Except now I know enough from my education and day job to build something useful.
+The moment this clicked for me wasn't a model demo. It was watching a broken, manual
+finance process get re-architected into something designed, automated, and provable — and
+realizing how much leverage lives in the *system around the work*, not the work itself.
+That same feeling (*the world just changed and I need to master it*) is what hit me when I
+started building seriously with AI. I'm relentless about delivering for the people who
+depend on me, and I won't leave a broken process alone — and now I have both the domain
+expertise and the tools to build the fix.
+
+This is the intersection the whole portfolio is built on: the rigor I brought to reliable,
+auditable financial systems, now applied to designing production AI architectures —
+agentic workflows with built-in controls, evals, human oversight, and audit trails, for
+reporting, compliance, FP&A, and portfolio operations. The bet is that the durable edge in
+AI isn't the model; it's the implementation layer and the proof around it.
 
 ---
 
@@ -96,7 +110,26 @@ bet the whole portfolio is built on, and where I think everything is going.
 
 ---
 
+## Finance & PE Applications
+
+The work most directly tied to my domain — fund accounting, PE and asset-management
+operations, compliance, and trading. If you came here from finance or PE, start here; the
+full chronological index follows below.
+
+| Project | What it is |
+|---------|------------|
+| [Forge — AI-Native Fund Accounting ERP](./projects/26-forge-fund-erp/) | From-scratch fund-administration platform with an audit-grade, replayable accounting core that reproduces byte-identical. ASC 946 statements, distribution waterfalls, per-class LP reporting — built via gated Claude Code phases and adversarial multi-agent review. |
+| [PortCo Value-Creation Agent Suite](#portco-value-creation-agents) | Four PE portfolio-company agents — working capital, freight, inventory, procurement. Each pairs a deterministic diagnostic with an LLM judgment layer behind a human approval queue, rolling a single-portco win up to a fund-level EBITDA / MOIC story. |
+| [Wacker Advisors OS](./projects/16-wacker-advisors-os/) | The operating system for an AI-native fractional CFO + CCO practice: compliance calendars, deliverable tracking, and document automation. Now running on live consultancy work. |
+| [007 Trading Agent](./projects/17-007-trading-agent/) | Multi-agent equities system: ~10 agents ingest data, debate each trade, and clear it against an independent risk veto. Built to produce a live paper-trading research record. |
+| [Kalshi Calibration Study](./projects/06-kalshi-trading/) | Academic question → live trading bot → published SSRN finding: BTC daily binaries are well-calibrated with no directional edge. An honest negative result, treated as the product. |
+| [Business Prompt Library](./projects/04-business-prompt-library/) | Production Claude skills for CFO/CCO advisory, SEC private-fund compliance, and ASC 946 investment-company accounting. |
+
+---
+
 ## Project Index
+
+The full chronological list — every build, in order, kept for transparency.
 
 | #  | Project                         | Month | Description                                                                                                                    | Started      | Status    |
 |----|---------------------------------|-------|--------------------------------------------------------------------------------------------------------------------------------|--------------|-----------|
@@ -372,48 +405,4 @@ research finding. Project 06 marked ✅ Done.
 
 **Status sweep (Jun 25)**
 - **Forge (26)**: core is published and at rest — `main` equals `origin/main`, CI green,
-  and all five fund anchors replay byte-identical. Recent sessions closed backlog cleanly
-  rather than opening new ground: LP self-service (own class economics + a quarterly LP
-  report), a real web-build gate in CI, toolchain bumps, and a Next.js security patch.
-  Next, deferred to its own checkpointed session, is byte-exact seed surgery to fold a
-  fund's reapply step into the seed. Strategic frame now explicit: Forge is the
-  reproducible layer-1 of a three-layer "company brain," sold to GPs through Wacker, with
-  pricing tied to provable correctness.
-- **Twitter Stock Research (24)**: added more tickers and began measuring returns by
-  sector — watch-list sectors against everything else — to see where the bookmarked crowd
-  clusters versus where performance actually is. Expanding the analysis next.
-- **SBGC CLT — STORM (27, new)**: tested STORM and Co-STORM over a built corpus to review
-  a community group's community-land-trust research. First run underdelivered — I anchored
-  the synthesis on a single referenced doc, which narrowed and biased the output away from
-  what the multi-perspective method is for. Logged as a useful negative result; rebuild is
-  to feed a broader, balanced corpus and re-run both passes.
-
-**Status sweep (Jun 27)**
-- **Repo rebranded → "AI Architect Journey."** The work has gone multi-model — Grok for the
-  trading-agent and brain-export tracks, with local/open models (Ollama, Kimi) being added —
-  so the name and the Tools Used section now reflect that, with Claude still predominant.
-- **Forge (26)**: the deferred byte-exact seed surgery shipped (Jun 26) — a clean `make demo`
-  now natively emits a fund's canonical 141-event log with **zero event bytes changed**, and
-  the dead reapply path is retired. The one-way door went through without breaking
-  byte-identity. Now in progress: attesting per-class LP economics, which meant re-baselining
-  the seed and re-pinning anchors; suite is ~580 tests, adversarial skeptic 7/7 green, paused
-  at a checkpoint awaiting my merge go. A reseed checkpoint hit a hard stop on a misread the
-  skeptic caught — the gate working as designed.
-- **Wacker Advisors OS (16)**: now running on live consultancy work rather than waiting in
-  the wings; website launch impending.
-- **Twitter Stock Research (24)**: watch list keeps growing as bookmarks accumulate;
-  expanding the sector-return analysis on the larger set is next.
-
-### Month 5: Advanced Architecture
-*Roadmap phase. Work started early (see Month 3 above).*
-
-### Month 6: Reputation & Income
-*Not started*
-
----
-
-## Resources
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Interactive Prompt Tutorial (GitHub)](https://github.com/anthropics/prompt-eng-interactive-tutorial)
-- [Getting Started with the API](https://docs.anthropic.com/en/docs/initial-setup)
-- [Tool Use 
+  and all five fund anchors replay byte-identical. Recent sessions closed

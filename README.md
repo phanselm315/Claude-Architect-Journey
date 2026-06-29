@@ -185,6 +185,48 @@ MOIC story. All public on GitHub, all on synthetic data with production-grade lo
 
 ---
 
+## Resources
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+- [Interactive Prompt Tutorial (GitHub)](https://github.com/anthropics/prompt-eng-interactive-tutorial)
+- [Getting Started with the API](https://docs.anthropic.com/en/docs/initial-setup)
+- [Tool Use Guide](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)
+- [Anthropic Academy (Skilljar)](https://anthropic.skilljar.com)
+- [Building Effective Agents](https://docs.anthropic.com/en/docs/agents-and-tools/overview)
+
+---
+
+## Tools Used
+- **Models (LLMs):** Claude — predominant (Haiku for scraping/summarization, Sonnet for reasoning, drafting, agents) · Grok (trading-agent research, brain export) · exploring local + open models (Ollama, Kimi)
+- **Languages:** Python · JavaScript / Node.js · TypeScript · SQL · HTML/CSS
+- **Databases:** PostgreSQL · SQLite · Supabase
+- **Backend:** FastAPI · Uvicorn · SQLAlchemy (async) · Typer (CLI)
+- **Frontend:** Next.js · React · Tailwind CSS
+- **Infra & quality:** Docker / docker-compose · pytest · mypy (strict) · ruff · Ed25519 signing · GitHub Actions
+- **Platforms & tools:** Vercel · Streamlit · GitHub · Claude Code · Cowork · Obsidian + Web Clipper · Jupyter · Excel
+- **Interfaces:** REST APIs · MCP servers · custom Claude skills
+- **Data & finance APIs:** QuickBooks Online · Plaid · Financial Modeling Prep (MCP) · Kalshi · Alpaca · EasyPost · Warp Freight
+- **Key libraries:** `@anthropic-ai/sdk` · Playwright · pandas · numpy · scikit-learn · rapidfuzz · Pydantic · yfinance · openpyxl · ReportLab · pypdf · Plotly
+
+---
+
+## About
+**Starting point:** Basic Python; no prior API or agent experience  
+**Domain:** Finance, compliance, private-equity value creation, nonprofit ops, household automation, and trading  
+**Goal:** Over 6 months, build a portfolio that shows what's possible when you use AI
+as an actual engineering partner, not a chatbot. Document the work publicly.
+
+---
+
+## Let's Talk
+
+I'm open to conversations on AI-native finance systems, vertical agent implementations for
+private equity and asset management, finance transformation leadership roles, and advisory
+work.
+
+[LinkedIn](https://www.linkedin.com/in/peter-c-hanselmann-cpa/) · phanselm315@gmail.com
+
+---
+
 ## Weekly Log
 
 ### Month 1: Foundation (Early–March 2026)
@@ -457,48 +499,6 @@ the Arc's old aspirational "next move."
 
 ### Month 6: Reputation & Income
 *Not started*
-
----
-
-## Resources
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Interactive Prompt Tutorial (GitHub)](https://github.com/anthropics/prompt-eng-interactive-tutorial)
-- [Getting Started with the API](https://docs.anthropic.com/en/docs/initial-setup)
-- [Tool Use Guide](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)
-- [Anthropic Academy (Skilljar)](https://anthropic.skilljar.com)
-- [Building Effective Agents](https://docs.anthropic.com/en/docs/agents-and-tools/overview)
-
----
-
-## Tools Used
-- **Models (LLMs):** Claude — predominant (Haiku for scraping/summarization, Sonnet for reasoning, drafting, agents) · Grok (trading-agent research, brain export) · exploring local + open models (Ollama, Kimi)
-- **Languages:** Python · JavaScript / Node.js · TypeScript · SQL · HTML/CSS
-- **Databases:** PostgreSQL · SQLite · Supabase
-- **Backend:** FastAPI · Uvicorn · SQLAlchemy (async) · Typer (CLI)
-- **Frontend:** Next.js · React · Tailwind CSS
-- **Infra & quality:** Docker / docker-compose · pytest · mypy (strict) · ruff · Ed25519 signing · GitHub Actions
-- **Platforms & tools:** Vercel · Streamlit · GitHub · Claude Code · Cowork · Obsidian + Web Clipper · Jupyter · Excel
-- **Interfaces:** REST APIs · MCP servers · custom Claude skills
-- **Data & finance APIs:** QuickBooks Online · Plaid · Financial Modeling Prep (MCP) · Kalshi · Alpaca · EasyPost · Warp Freight
-- **Key libraries:** `@anthropic-ai/sdk` · Playwright · pandas · numpy · scikit-learn · rapidfuzz · Pydantic · yfinance · openpyxl · ReportLab · pypdf · Plotly
-
----
-
-## About
-**Starting point:** Basic Python; no prior API or agent experience  
-**Domain:** Finance, compliance, private-equity value creation, nonprofit ops, household automation, and trading  
-**Goal:** Over 6 months, build a portfolio that shows what's possible when you use AI
-as an actual engineering partner, not a chatbot. Document the work publicly.
-
----
-
-## Let's Talk
-
-I'm open to conversations on AI-native finance systems, vertical agent implementations for
-private equity and asset management, finance transformation leadership roles, and advisory
-work.
-
-[LinkedIn](https://www.linkedin.com/in/peter-c-hanselmann-cpa/) · phanselm315@gmail.com
 
 ---
 

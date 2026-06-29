@@ -167,6 +167,7 @@ The full chronological list — every build, in order, kept for transparency.
 | 26 | [Forge: AI-Native Fund Accounting ERP](./projects/26-forge-fund-erp/)     | 4–5   | From-scratch AI-native fund administration platform: audit-grade, replayable accounting core built via a two-tier Claude workflow (architect sessions → gated Claude Code phases → adversarial multi-agent review) | Jun 3, 2026  | 🔄 Active  |
 | 27 | [SBGC CLT — STORM Research Synthesis](./projects/27-sbgc-clt-storm/)       | 3–4   | Test of Stanford's STORM / Co-STORM multi-perspective article generation over a built corpus, used to review a community group's community-land-trust research. First run underdelivered — anchoring on one source doc narrowed the synthesis; rebuild planned | Jun 2026     | 🔄 Active  |
 | 28 | [Sass Factory](./projects/28-sass-factory/)                              | 5     | Gated software factory: spawns sandboxed coding agents at a repo, streams their work live, and gates every change at the merge boundary (deterministic `check-all` + an adversarial review agent that votes merge/block) so nothing ships unchecked. Self-advancing — it now builds its own backlog. The Arc's "loops of loops" generalized into a reusable system | Jun 25, 2026 | 🔄 Active  |
+| 29 | [Content Factory](./projects/29-content-factory/)                        | 4     | Faceless short-form video engine: a six-agent system (Trend Scout → Format Architect → Production Line → Evaluator) producing a small portfolio of niche accounts, governed by a scorecard locked before any data exists and a weekly kill cycle with binding keep/kill gates. Affiliate-first. Early stage — scaffold built, nothing live yet | Jun 7, 2026  | 🔄 Active  |
 
 ### PortCo Value Creation Agents
 
@@ -388,6 +389,15 @@ Out-of-Sample Trading Experiment"*, now on
 academic question, became a live trading bot, and found no edge, closes as a published
 research finding. Project 06 marked ✅ Done.
 
+**Content Factory: a gated short-form content engine (Jun 7 → ongoing)**
+The gated-loop pattern pointed at media instead of code. A six-agent system — Trend Scout,
+Format Architect, Production Line, Evaluator, and an orchestrator — produces a small
+portfolio of faceless niche video accounts, with a scorecard locked before any data exists
+and a weekly kill cycle whose Distribution-Reality and Unit-Economics lenses have binding
+keep/kill power. A red-team review caught the portfolio being selected on signals unlinked to
+revenue, which is exactly what the evaluator gates exist to stop. Foundation stage: scaffold
+and Python pipeline built (edge-tts, stock-footage fetch, assembly), nothing live yet.
+
 **Status sweep (Jun 23)**
 - **Forge (26)**: the demo I targeted for June 8 landed, and the build kept going. Since
   then: a distribution-waterfall engine, statement renderers, and ASC 946 financial
@@ -430,9 +440,6 @@ the Arc's old aspirational "next move."
 - **Sass Factory (28, new)**: the reusable, self-advancing software factory above is built
   and dogfooding — and it pushes The Arc to a 7th rung (a factory that builds, reviews,
   tests, and ships software end to end, currently building itself).
-- **Repo rebranded → "AI Architect Journey."** The work has gone multi-model — Grok for the
-  trading-agent and brain-export tracks, with local/open models (Ollama, Kimi) being added —
-  so the name and the Tools Used section now reflect that, with Claude still predominant.
 - **Forge (26)**: the deferred byte-exact seed surgery shipped (Jun 26) — a clean `make demo`
   now natively emits a fund's canonical 141-event log with **zero event bytes changed**, and
   the dead reapply path is retired. The one-way door went through without breaking
@@ -465,8 +472,12 @@ the Arc's old aspirational "next move."
 
 ## Tools Used
 - **Models (LLMs):** Claude — predominant (Haiku for scraping/summarization, Sonnet for reasoning, drafting, agents) · Grok (trading-agent research, brain export) · exploring local + open models (Ollama, Kimi)
-- **Languages:** JavaScript / Node.js · Python · HTML/CSS
-- **Platforms & infra:** Vercel · Supabase · Streamlit · GitHub · Claude Code · Cowork · Obsidian + Web Clipper · Jupyter · Excel
+- **Languages:** Python · JavaScript / Node.js · TypeScript · SQL · HTML/CSS
+- **Databases:** PostgreSQL · SQLite · Supabase
+- **Backend:** FastAPI · Uvicorn · SQLAlchemy (async) · Typer (CLI)
+- **Frontend:** Next.js · React · Tailwind CSS
+- **Infra & quality:** Docker / docker-compose · pytest · mypy (strict) · ruff · Ed25519 signing · GitHub Actions
+- **Platforms & tools:** Vercel · Streamlit · GitHub · Claude Code · Cowork · Obsidian + Web Clipper · Jupyter · Excel
 - **Interfaces:** REST APIs · MCP servers · custom Claude skills
 - **Data & finance APIs:** QuickBooks Online · Plaid · Financial Modeling Prep (MCP) · Kalshi · Alpaca · EasyPost · Warp Freight
 - **Key libraries:** `@anthropic-ai/sdk` · Playwright · pandas · numpy · scikit-learn · rapidfuzz · Pydantic · yfinance · openpyxl · ReportLab · pypdf · Plotly
@@ -491,4 +502,5 @@ work.
 
 ---
 
-*Started: March 1, 2026 · Updated: June 27, 2026*
+*Started: March 1, 2026 · Updated: June 28, 2026*
+                                                                                                                                                                                                                                                                                         

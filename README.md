@@ -9,16 +9,11 @@ milestones, and weekly notes.
 ---
 
 ## Who I Am
-CPA and finance transformation leader with 15+ years in private equity and hedge fund
-operations — focused on process optimization, systems implementation, and controls. I've
-led large-scale platform migrations and built scalable reporting and compliance
-infrastructure for hundreds of funds, including a ~$9M operations platform migration that
-cut manual effort ~70% and saved ~$8M, and the operational stand-up behind a $150M fund
-launch. Notre Dame (Mendoza) BBA/MSA; Illinois CPA.
+CPA and finance transformation leader with 15+ years in private equity and hedge fund operations — focused on process optimization, systems implementation, and controls. I've led large-scale platform migrations and built scalable operations, reporting, and compliance infrastructure for thousands of funds, from small middle market PE firms to the largest alternative asset managers in the world. Notre Dame (Mendoza) BBA/MSA; Illinois CPA.
 
-The moment this clicked for me wasn't a model demo. It was watching a broken, manual
-finance process get re-architected into something designed, automated, and provable. The
-finance work taught me to treat broken processes as design problems rather than things to
+The moment this clicked for me was watching a broken, manual
+finance process get re-architected into something designed, automated, and provable. My
+finance and accounting work taught me to treat broken processes as design problems rather than things to
 work around, and that instinct carried over when I started building with AI: most of what
 I've made since March turns manual, error-prone, or opaque work into something with clearer
 inputs, explicit checks, and reviewable outputs.
@@ -49,28 +44,23 @@ The gap between hobbyists and people earning income from AI is architecture: how
 ## How My Workflow Has Changed
 
 My workflow has shifted as I've tried to make AI do real work instead of just generating
-text. Early on I was copy-pasting prompts and fixing the output by hand. Then I started
-letting Claude edit code directly. After that I began handing off bigger tasks to agents
-that could plan and iterate on their own.
+text. Early on I was copy-pasting prompts that I worked on in Grok, Claude, or Chat GPT and fixing the output by hand. Then I started letting Claude edit code directly. After that I began handing off bigger tasks to agents that could plan and iterate on their own.
 
 More recently I've been building more structure around the agents: having them review each
 other's work (the 007 trading debate, Forge's adversarial reviewers), gating build loops
 behind explicit checks, and — most recently — a setup that spins up isolated coding agents
 and gates their changes before anything merges. That last one is the current experiment I'm
-calling [Sass Factory](./projects/28-sass-factory/). It isn't a finished product or a new
+calling [Sass Factory](./projects/28-sass-factory/). It isn't a new
 paradigm; it's just the latest attempt to stop being the bottleneck on every change.
-
-The thread through all of it: the more I try to productionize this work, the more the job
-becomes designing the checks and handoffs so the system stays honest, rather than steering
-every step myself.
 
 ### Where This Is Headed
 
 I'm still figuring out what actually compounds. So far the pattern that seems most valuable
 isn't better prompts or even better agents — it's building environments where the output is
-easier to verify and harder to silently degrade. The more I've tried to productionize this
-work, the more the bottleneck has moved from "can the model do it" to "can I trust what it
-just did without re-checking everything myself."
+easy to verify and hard to silently degrade. The more I try to productionize this work, the
+more the job shifts from steering every step myself to designing the checks and handoffs
+that keep the system honest — and the bottleneck moves from "can the model do it" to "can I
+trust what it just did without re-checking everything myself."
 
 I'm not claiming this is a novel insight — plenty of people are converging on similar ideas.
 I'm just documenting what the work has actually felt like on the ground.
@@ -234,3 +224,4 @@ A build-every-week record. The detail lives in each project page; this is the ca
 ---
 
 *Started: March 1, 2026 · Updated: June 28, 2026*
+                              

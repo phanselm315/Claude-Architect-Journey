@@ -17,9 +17,11 @@ cut manual effort ~70% and saved ~$8M, and the operational stand-up behind a $15
 launch. Notre Dame (Mendoza) BBA/MSA; Illinois CPA.
 
 The moment this clicked for me wasn't a model demo. It was watching a broken, manual
-finance process get re-architected into something designed, automated, and provable — and
-realizing how much leverage lives in the *system around the work*, not the work itself.
-I won't leave a broken process alone — and now I have both the domain expertise and the tools to build the fix.
+finance process get re-architected into something designed, automated, and provable. The
+finance work taught me to treat broken processes as design problems rather than things to
+work around, and that instinct carried over when I started building with AI: most of what
+I've made since March turns manual, error-prone, or opaque work into something with clearer
+inputs, explicit checks, and reviewable outputs.
 
 This is the intersection the whole portfolio is built on: the rigor I brought to reliable,
 auditable financial systems, now applied to designing production AI architectures —
@@ -44,68 +46,34 @@ The gap between hobbyists and people earning income from AI is architecture: how
 
 ---
 
-## The Arc
+## How My Workflow Has Changed
 
-The projects below are the *what*. This is the *how* — and it's the part that actually
-compounded. Over six months my unit of work kept moving up a level of abstraction:
+My workflow has shifted as I've tried to make AI do real work instead of just generating
+text. Early on I was copy-pasting prompts and fixing the output by hand. Then I started
+letting Claude edit code directly. After that I began handing off bigger tasks to agents
+that could plan and iterate on their own.
 
-1. **Copy-pasting prompts.** One prompt, one answer, into the chat box. My voice and my
-   context lived in my head and got retyped every time.
-2. **Into Claude Code.** Stopped pasting and let Claude touch the codebase directly. The
-   loop tightened from "ask, paste, fix" to "describe, review, ship."
-3. **Into a single agent.** Handed off a whole task to an agent that planned and executed
-   on its own, instead of me steering every step.
-4. **Into multi-agent orchestration.** Agents that argue opposite sides, review each
-   other, and clear work against an independent veto — the 007 trading debate, Forge's
-   adversarial reviewers tasked with proving the build dishonest.
-5. **Into agent loops.** Gated, self-checking build loops: a versioned phase prompt feeds
-   Claude Code, which implements behind hard stop conditions, which feeds a review pass
-   that either passes or kicks it back. Progress stops being vibes.
-6. **Into loops of loops.** Where the AI-native ERP build (Forge) actually lives — nested
-   loops where the *process* of building is itself an orchestrated system, not a person
-   running a checklist.
-7. **Into a factory.** The loops-of-loops extracted from a single build and made a reusable
-   system — [Sass Factory](./projects/28-sass-factory/) (Project 28). Coding agents spawned
-   in isolated git clones, watched live, with every change gated at the merge boundary:
-   deterministic checks plus an adversarial reviewer that votes merge or block, with results
-   proposed as PRs so nothing merges unchecked. It now drives a human-defined backlog through
-   its own gates with no prompt-shuttling between sessions. The build process stopped being
-   something I run step by step and became a system I *own*: a factory that builds, reviews,
-   tests, and gates software up to the merge boundary — and has already driven several of its
-   own deliverables through itself.
+More recently I've been building more structure around the agents: having them review each
+other's work (the 007 trading debate, Forge's adversarial reviewers), gating build loops
+behind explicit checks, and — most recently — a setup that spins up isolated coding agents
+and gates their changes before anything merges. That last one is the current experiment I'm
+calling [Sass Factory](./projects/28-sass-factory/). It isn't a finished product or a new
+paradigm; it's just the latest attempt to stop being the bottleneck on every change.
 
-The shift that ties it together: I've stopped being the loop *operator* and become the loop
-*designer*. The job isn't to run loops faster — it's to decide which loops exist, what each
-one is for, and how they hand off; then to monitor them as they run and tweak the ones that
-drift; and to keep the context they run against clean enough that each run leaves the next
-one better. A planned portfolio of loops I design, watch, and tune — not a bag of tricks.
-
-That meta move is no longer aspirational — it's built. The reusable **AI engineering team**
-is **Sass Factory**: every lesson from the Forge build and from my own machine setup,
-synthesized into a gated, self-advancing software factory. It's already dogfooding —
-driving a human-defined backlog through its own control plane and gate chain — and the next move is
-simply pointing it at the next product. Lessons stopped being trapped inside one build and
-started compounding across all of them. That was always the thesis: not "I used AI to build
-a thing," but "I built the system that builds the things, and it gets better every cycle."
-Now it exists.
+The thread through all of it: the more I try to productionize this work, the more the job
+becomes designing the checks and handoffs so the system stays honest, rather than steering
+every step myself.
 
 ### Where This Is Headed
 
-*My read of the tea leaves — light, and held loosely.*
+I'm still figuring out what actually compounds. So far the pattern that seems most valuable
+isn't better prompts or even better agents — it's building environments where the output is
+easier to verify and harder to silently degrade. The more I've tried to productionize this
+work, the more the bottleneck has moved from "can the model do it" to "can I trust what it
+just did without re-checking everything myself."
 
-The leverage is moving off the model and onto the **system around it**. Models are becoming a
-commodity input; everyone will have a good one. The durable edge is the implementation layer
-— the workflow design, the authority limits, the evals and audit trails — wrapped around a
-context store that gets richer every cycle instead of sitting still. Three things I keep
-betting on: the unit of work has climbed from the prompt to a designed portfolio of loops,
-and the scarce skill is now designing and tuning them, not running them; the moat isn't
-intelligence but the compounding context and judgment you've encoded into the system — the
-part that doesn't commoditize when the model does; and proof is the product — you stop
-trusting the agent and start trusting the environment around it, building the verification
-so failure is hard and the quality floor only ratchets up; "done isn't done" until the
-output is provable, not merely plausible. That's the entire reason Forge exists. Put it together and the people who win this next phase are the ones who can turn
-their own expertise into a system that runs without them — and prove it was right. That's the
-bet the whole portfolio is built on, and where I think everything is going.
+I'm not claiming this is a novel insight — plenty of people are converging on similar ideas.
+I'm just documenting what the work has actually felt like on the ground.
 
 ---
 
@@ -171,7 +139,7 @@ The full chronological list — every build, in order, kept for transparency.
 | 25 | [Taste Interview: Voice Profile](./projects/25-taste-interview/)          | 3–4   | 100-question Claude-conducted interview extracting my personal writing voice into a profile any AI writing task can load. Checkpointed, hard-rule tagged, drafting exercises included | May 28, 2026 |
 | 26 | [Forge: AI-Native Fund Accounting ERP](./projects/26-forge-fund-erp/)     | 4–5   | From-scratch AI-native fund administration platform: audit-grade, replayable accounting core built via a two-tier Claude workflow (architect sessions → gated Claude Code phases → adversarial multi-agent review) | Jun 3, 2026  |
 | 27 | [SBGC CLT — STORM Research Synthesis](./projects/27-sbgc-clt-storm/)       | 3–4   | Test of Stanford's STORM / Co-STORM multi-perspective article generation over a built corpus, used to review a community group's community-land-trust research. First run underdelivered — anchoring on one source doc narrowed the synthesis; rebuild planned | Jun 2026     |
-| 28 | [Sass Factory](./projects/28-sass-factory/)                              | 5     | Gated software factory: spawns coding agents in isolated git clones, streams their work live, and gates every change at the merge boundary (deterministic `check-all` + an adversarial review agent that votes merge/block), proposing merges as PRs so nothing merges unchecked. Self-advancing — it drives its own (human-defined) backlog through its gates. The Arc's "loops of loops" generalized into a reusable system | Jun 25, 2026 |
+| 28 | [Sass Factory](./projects/28-sass-factory/)                              | 5     | Gated software factory: spawns coding agents in isolated git clones, streams their work live, and gates every change at the merge boundary (deterministic `check-all` + an adversarial review agent that votes merge/block), proposing merges as PRs so nothing merges unchecked. Self-advancing — it drives its own (human-defined) backlog through its gates. The gated build-loop pattern generalized into a reusable system | Jun 25, 2026 |
 | 29 | [Content Factory](./projects/29-content-factory/)                        | 4     | Faceless short-form video engine: a five-role pipeline (Orchestrator → Trend Scout → Format Architect → Production Line → Evaluator) with a separate six-agent red-team review, producing a small portfolio of niche accounts, governed by a scorecard locked before any data exists and a weekly kill cycle with binding keep/kill gates. Affiliate-first. Early stage — scaffold built, nothing live yet | Jun 7, 2026  |
 
 ### PortCo Value Creation Agents
@@ -260,7 +228,7 @@ A build-every-week record. The detail lives in each project page; this is the ca
 - Wacker OS built out and ready to deploy on client work; website launch impending.
 
 **Month 5 — Advanced Architecture (June 2026)**
-- Sass Factory: the loops-of-loops generalized into a reusable, self-advancing software factory — gated at the merge boundary, now driving its own (human-defined) backlog through its gates. The Arc's seventh rung.
+- Sass Factory: the gated-loop pattern generalized into a reusable software factory — gated at the merge boundary, now driving its own (human-defined) backlog through its gates. The most structured of these experiments so far.
 
 **Month 6 — Reputation & Income**
 - Underway: this portfolio, outreach, and first paid work.

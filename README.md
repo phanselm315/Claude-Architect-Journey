@@ -62,6 +62,14 @@ more the job shifts from steering every step myself to designing the checks and 
 that keep the system honest — and the bottleneck moves from "can the model do it" to "can I
 trust what it just did without re-checking everything myself."
 
+What seems to actually compound isn't the model — it's the implementation layer I build
+around it: the encoded judgment, the checks, the domain rules, and the reusable scaffolding
+that accumulate with every project. The model is rented and commoditizing; that accumulated
+implementation is the part I own. The bet for the business is to capture that moat while
+building — turning each engagement's verification logic and domain knowledge into reusable
+assets — so every build starts ahead of the last one instead of from scratch, and the
+advantage compounds.
+
 I'm not claiming this is a novel insight — plenty of people are converging on similar ideas.
 I'm just documenting what the work has actually felt like on the ground.
 

@@ -35,6 +35,8 @@ Took a published trading-strategy paper, re-ran its methodology on the latest mo
 **[Sass Factory — a Gated Software Factory](./projects/28-sass-factory/)**
 A build loop where work can't merge until it's proven. It spawns coding agents in isolated git clones, streams their work live, and gates every change at the merge boundary — deterministic checks plus an adversarial review agent that votes merge or block — so nothing lands unchecked. Then it closes the loop on itself: it drives its own backlog through its own gates, a loop of loops where the factory advances the work and the gates keep it honest. The same separation-of-duties and audit-trail instinct that governs a finance close, turned into a machine that builds.
 
+*Browse every build — including the earlier and personal projects — in [`projects/`](./projects/).*
+
 ---
 
 ## Engineering for Trust

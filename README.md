@@ -1,64 +1,75 @@
 # Finance Engineering
 
-Building pieces of the next generation of finance infrastructure for private capital — fund administration, controllership, and portfolio-company value creation.
+I solve finance operating problems for private capital.
 
-I've spent 15 years redesigning how institutional finance runs — fund accounting operating models, ERP implementations, controllership and compliance builds across PE, hedge funds, and fund administration. AI and software are just the newest tools for the same job. This repo is where I prototype what AI-native finance systems should look like.
+For 15 years I worked inside PE-backed finance organizations — Big Four, Northern Trust, fund administration, a Kirkland-adjacent platform — rebuilding the machinery institutional finance actually runs on. I've rebuilt fund accounting. I've rebuilt controllership. I've rebuilt compliance. I've rebuilt reporting. ASC 946 statements, ERP implementations, close processes, audit and custody readiness, distribution waterfalls, LP reporting.
 
-The approach is always the same: start with the operating model, not the technology. Why does this process exist? Where does the truth actually live? What evidence and approvals does the accounting event need? Software comes last — only for the parts that should exist at all.
+Today AI lets me encode those operating models into software. That's the only reason AI is in this repo at all — it's the newest implementation layer for work I've been doing my whole career, not a new career.
+
+This is the public body of work behind that.
+
+---
+
+## What is Finance Engineering?
+
+Finance engineering sits between finance transformation and software engineering, in the gap neither one closes.
+
+Finance transformation knows *why* a finance organization should work a certain way — where truth should live, what evidence an accounting event needs, who approves what, how a close survives an audit. But it stops at slideware and process maps. It hands the operating model to someone else to build.
+
+Software engineering can build anything, but doesn't carry the operating model. It ships features, not controllership.
+
+A finance engineer designs the operating model **and** encodes it into software. I take the institutional judgment that normally lives in a senior controller's head — the rules, the controls, the "we don't book it until X" — and make it executable, replayable, and auditable.
+
+That's the thing worth building: **institutional memory as software.** Not AI, not agents, not automation for its own sake — institutional judgment, encoded into a system someone can own and trust. The model is rented and commoditizing. The durable asset is the implementation layer around it: the encoded judgment, the domain rules, the checks, the audit trails. Exactly the layer institutional finance has always cared about most.
+
+---
+
+## How I Build
+
+The approach is always the same: **start with the operating model, not the technology.** Why does this process exist? Where does the truth actually live? What evidence and approvals does the accounting event need? **Software comes last** — and only for the parts that should exist at all.
+
+One instinct runs through everything here: output has to be verifiable and hard to silently degrade. That's a controls habit, not an AI one — gates inside gates, human approval before any agent touches the outside world, replayable cores where a discrepancy is always a real signal. That human-approval step does more than catch errors; it's how a person keeps ownership of the system and what it produces, instead of deferring to the model.
+
+The bigger idea sits underneath all of it. Most "company brain" tools build their memory and agents on top of systems that can already be wrong, reconstructing the truth probabilistically — so they end up confidently wrong. Own the reproducible bottom layer instead, and everything above it inherits proof. The same holds for the human layer: the ways of working and hard-won judgment that actually run an organization are usually buried in its knowledge workers — the people who'd benefit most from a system they own and control, rather than one imposed on them.
 
 ---
 
 ## Selected Work
 
-Most run on synthetic or anonymized data with production-style logic. This is a lab, not a client environment.
+Three builds carry the thesis. Each runs on synthetic or anonymized data with production-style logic — this is a lab, not a client environment.
 
-**[Forge — AI-Native Fund Accounting ERP](./projects/26-forge-fund-erp/)**
-Fund administration is built on reconciliation: the same capital activity keyed into four systems, then proven to agree every close. Forge removes the duplicate sources of truth — one replayable, deterministic accounting core from which ASC 946 statements, distribution waterfalls, and per-class LP reporting are *derived*, not reconciled. Financial statements as evidence, not assertions.
+### [Forge — AI-Native Fund Accounting ERP](./projects/26-forge-fund-erp/)
 
-**Portfolio-Company Value-Creation Agents**
-Four operational-finance diagnostics, each pairing a deterministic engine with an LLM judgment layer, each rolling a single-portco win up to a fund-level EBITDA bridge. The value-creation diagnostic becomes a reusable asset instead of a slide that dies with the engagement.
+**Problem.** Fund administration is built on reconciliation: the same capital activity keyed into four systems, then proven to agree every close. The duplicate sources of truth *are* the cost.
 
-- **[Working Capital](./projects/20-working-capital-agent/)** — agentic AR diagnostic and collections tool: trapped-cash analysis, customer segmentation, Claude-drafted outreach gated behind a human approval queue, fund-level treasury rollup.
-- **[Freight](./projects/21-freight-carrier-optimization-agent/)** — re-prices a manufacturer's shipment history against live carrier rates and decomposes the savings lever by lever into an EBITDA bridge.
-- **[Inventory](./projects/22-inventory-intelligence-agent/)** — segments a distributor's catalog by ABC × XYZ, sizes safety stock and EOQ cycle stock, surfaces dead SKUs, and rolls a working-capital release up to a fund-wide √N pooling play (MOIC).
-- **[Procurement](./projects/23-procurement-spend-intelligence-agent/)** — cleans the vendor master, classifies spend, surfaces tail / maverick / concentration risk, and rolls per-portco savings up to a fund-wide negotiation playbook.
+**Approach.** One replayable, deterministic accounting core. ASC 946 statements, distribution waterfalls, and per-class LP reporting are *derived* from it, not reconciled into agreement.
 
-**[Wacker Advisors OS](./projects/16-wacker-advisors-os/)**
-The operating system for a one-person AI-native CFO/CCO practice — compliance calendars, deliverable tracking, document automation, with the recurring judgment encoded as rules. The firm's operating model, made executable.
+**Result.** Financial statements as evidence, not assertions — the build someone with my background should eventually have made.
 
-**[007 — Multi-Agent Equities Research](./projects/17-007-trading-agent/)**
-A working clone of the published *TradingAgents: Multi-Agents LLM Financial Trading Framework* (arXiv [2412.20138](https://arxiv.org/abs/2412.20138)), rebuilt from scratch on the native Anthropic SDK: ~10 agents argue each call and an independent risk agent can veto it. Separation of duties as design — the same reason finance splits who approves from who executes. Produces a paper-trading research record.
+### [Portfolio-Company Value-Creation Agents](./projects/20-working-capital-agent/)
 
-**[Kalshi Calibration Study](./projects/06-kalshi-trading/)**
-Took a published trading-strategy paper, re-ran its methodology on the latest model, and backtested to see whether a stronger model changed the result — a 1,274-market study. It didn't: the markets are well-calibrated, with no directional edge. Written up as an academic paper. The willingness to test the claim and report the negative is the whole discipline — in trading and in controllership.
+**Problem.** Operational-finance diagnostics for portfolio companies die as slides at the end of an engagement. The work isn't reusable and never rolls up to the fund.
 
-**[Sass Factory — a Gated Software Factory](./projects/28-sass-factory/)**
-A build loop where work can't merge until it's proven. It spawns coding agents in isolated git clones, streams their work live, and gates every change at the merge boundary — deterministic checks plus an adversarial review agent that votes merge or block — so nothing lands unchecked. Then it closes the loop on itself: it drives its own backlog through its own gates, a loop of loops where the factory advances the work and the gates keep it honest. The same separation-of-duties and audit-trail instinct that governs a finance close, turned into a machine that builds.
+**Approach.** Four diagnostics, each pairing a deterministic engine with an LLM judgment layer, each rolling a single-portco win up to a fund-level EBITDA bridge: [Working Capital](./projects/20-working-capital-agent/) (AR / trapped-cash, collections outreach gated behind human approval), [Freight](./projects/21-freight-carrier-optimization-agent/) (shipment history re-priced against live carrier rates), [Inventory](./projects/22-inventory-intelligence-agent/) (ABC × XYZ segmentation, safety/cycle stock, fund-wide pooling MOIC), and [Procurement](./projects/23-procurement-spend-intelligence-agent/) (spend classification, tail/maverick risk, fund-wide negotiation playbook).
 
-*Browse every build — including the earlier and personal projects — in [`projects/`](./projects/).*
+**Result.** The diagnostic becomes a reusable fund asset instead of a one-time deliverable.
 
----
+### [Wacker Advisors OS](./projects/16-wacker-advisors-os/)
 
-## Engineering for Trust
+**Problem.** A one-person AI-native CFO/CCO practice still has to run compliance calendars, deliverable tracking, and recurring document work without a back office.
 
-One instinct runs through all of it: output has to be verifiable and hard to silently degrade. That's a controls habit, not an AI one — gates inside gates, human approval before any agent touches the outside world, replayable cores where a discrepancy is always a real signal. And in my experience, that human-approval step does more than catch errors — it's how a person keeps ownership of the system and what it produces, instead of deferring to the model.
+**Approach.** The firm's operating model made executable — compliance calendars, deliverable tracking, document automation, with the recurring judgment encoded as rules.
 
-The model is rented and commoditizing. The durable asset is the implementation layer around it — the encoded judgment, domain rules, checks, and audit trails. Exactly the layer institutional finance has always cared about most.
+**Result.** Software I run my own practice on. I build what I actually use.
 
-The bigger idea sits underneath all of it. Most "company brain" tools build their memory and agents on top of systems that can already be wrong, reconstructing the truth probabilistically — so they end up confidently wrong. Own the reproducible bottom layer instead, and everything above it inherits proof. The same holds for the human layer: the ways of working, institutional judgment, and hard-won knowledge that actually run an organization are often buried in its knowledge workers — the people who'd benefit most from a system they could own, manage, and control, rather than one imposed on them.
+*Browse every build — including earlier and personal projects — in [`projects/`](./projects/).*
 
 ---
 
-## Stack
+## Additional Research
 
-Python · TypeScript · FastAPI · async SQLAlchemy · PostgreSQL · Next.js / React. Claude as the primary model (Haiku for extraction, Sonnet for reasoning and agents); Grok and local models in the mix. Controls-grade hygiene: pytest, strict mypy, Docker, signed artifacts, CI gates, custom MCP servers and Claude skills. Finance plumbing through QuickBooks Online, Plaid, and Financial Modeling Prep.
+Adjacent work — good builds, but supporting evidence rather than the main thesis.
 
-The full chronological record of every build — including the early and personal projects — is in [`LOG.md`](./LOG.md).
-
----
-
-## Let's Talk
-
-I'm open to conversations on AI-native finance systems, vertical agent implementations for private equity and asset management, finance transformation leadership roles, and advisory work.
-
-[LinkedIn](https://www.linkedin.com/in/peter-c-hanselmann-cpa/) · phanselm315@gmail.com
+- **[007 — Multi-Agent Equities Research](./projects/17-007-trading-agent/)** — a from-scratch clone of the published *TradingAgents* framework (arXiv [2412.20138](https://arxiv.org/abs/2412.20138)) on the native Anthropic SDK: ~10 agents argue each call, an independent risk agent can veto it. Separation of duties as design.
+- **[Kalshi Calibration Study](./projects/06-kalshi-trading/)** — re-ran a published trading-strategy paper on the latest model across 1,274 markets to test whether a stronger model changed the result. It didn't; the markets are well-calibrated. Reporting the negative is the whole discipline.
+- **[Sass Factory — a Gated Software Factory](./projects/28-sass-factory/)** — a build loop where nothing merges until it's proven: coding agents in isolated git clones, every change gated at the merge boundary by deterministic checks plus an adversarial review agent. The separation-of-duties instinct of a finance close, turned into a ma

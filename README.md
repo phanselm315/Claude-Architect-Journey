@@ -45,6 +45,8 @@ One instinct runs through all of it: output has to be verifiable and hard to sil
 
 The model is rented and commoditizing. The durable asset is the implementation layer around it — the encoded judgment, domain rules, checks, and audit trails. Exactly the layer institutional finance has always cared about most.
 
+The bigger idea sits underneath all of it. Most "company brain" tools build their memory and agents on top of systems that can already be wrong, reconstructing the truth probabilistically — so they end up confidently wrong. Own the reproducible bottom layer instead, and everything above it inherits proof. The same holds for the human layer: the ways of working, institutional judgment, and hard-won knowledge that actually run an organization are buried in its knowledge workers — the people who'd benefit most from a system they could own, manage, and control, rather than one imposed on them or built to quietly replace them.
+
 ---
 
 ## Stack

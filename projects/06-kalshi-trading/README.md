@@ -1,6 +1,6 @@
 # Kalshi Trading
 
-**Status:** ✅ Done — paper published on SSRN (June 2026)  
+**Status:** ✅ Done — paper submitted (June 2026)  
 **Started:** Apr 2, 2026  
 
 ## What This Is
@@ -22,7 +22,7 @@ written up and published.
 4. **Live paper simulation** — 55 settled paper trades over a week against a $1,000 bankroll
 5. **Calibration study** — market mid-price at T-24h scored against realized outcomes
    across 1,274 settled markets
-6. **Research write-up** — published June 2026 (see Publication below)
+6. **Research write-up** — submitted June 2026 (see Publication below)
 
 ## What the Data Showed
 
@@ -48,11 +48,10 @@ overfitting until a backtest looks good.
 
 ## Publication
 
-The write-up is published on SSRN (June 2026):
+The write-up was submitted in June 2026:
 
 > **"Are Bitcoin Daily Binary Prediction Markets Efficient? Calibration Evidence from
 > 1,274 Settled Kalshi Contracts and a Live Out-of-Sample Trading Experiment"**
-> — [ssrn.com/abstract=6891438](https://ssrn.com/abstract=6891438)
 
 Full circle: the project that started as an academic research question ends as an
 academic paper — with a live trading bot in the middle proving the answer.

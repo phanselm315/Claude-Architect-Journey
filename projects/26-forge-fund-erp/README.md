@@ -6,18 +6,18 @@
 
 ## What This Is
 
-The most ambitious build of the journey so far: a from-scratch, AI-native fund
-administration and investment-company accounting platform for private funds — the
-category owned today by incumbents like Allvue, Dynamo, and eFront. Two bets define it.
-First, audit-grade trust: every financial fact lives in an append-only, cryptographically
-verifiable record, and every report can be replayed and proven byte-identical from that
-record. Second, natural language as the eventual interface for querying and report design
-— but only on top of a deterministic accounting core that makes the answers trustworthy.
-The deterministic core is what's being built now.
+> **Forge is an AI-native ERP for funds and their portfolio companies that keeps books so clean and reproducible that audit and compliance cost almost takes care of itself.**
+
+Most emerging managers can't easily prove how they got a number — a mark, a capital
+balance, a fee calc — until an auditor or LP asks, and then it's a scramble. Forge fixes
+that at the source: every economic event, from a capital call down to a portfolio
+company's operating expense, is recorded once on a signed, reproducible ledger, and the
+books follow by rule. The result is audit-ready books as a deliverable, and a valuation
+you can defend without a fire drill.
 
 This is where fifteen years of fund-accounting and audit domain knowledge meets everything
 the previous 25 projects taught me about building with Claude. I've migrated funds onto
-the incumbent platforms; this time I'm building the thing.
+the incumbent platforms — Allvue, Dynamo, eFront; this time I'm building the thing.
 
 ## How It's Being Built
 

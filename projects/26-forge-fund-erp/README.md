@@ -1,7 +1,8 @@
 # Forge — AI-Native Fund Accounting ERP
 
-**Status:** 🔄 Active — core published, byte-identical reproduction; per-class LP economics attestation in progress  
+**Status:** 🔄 Active — carried-interest attestation and first value-creation-layer increment both published and CI-green; project at rest  
 **Started:** June 3, 2026  
+**Last updated:** July 1, 2026  
 **Code:** Private build — details deliberately high-level here  
 
 ## What This Is
@@ -38,8 +39,8 @@ The build process is the story I can tell publicly. A two-tier Claude workflow:
 - **Persistent project memory.** A living lessons-learned file where every gotcha and
   every binding decision gets logged, so no session starts from zero.
 
-Fifteen-plus build phases planned and executed across the run, with
-the test suite (~140 passing tests, strict type-checking across the codebase) holding the
+Twenty-six-plus build phases planned and executed across the run, with
+the test suite (now several hundred passing tests, strict type-checking across the codebase) holding the
 line throughout. The first working demo landed on schedule in early June; the build has since pushed past the demo into the accounting engines themselves.
 
 ## Current Milestone
@@ -81,14 +82,39 @@ canonical 141-event log — shipped cleanly. The standalone reapply path is reti
 briefly back at rest. The step treated like a one-way door went through without breaking
 byte-identity.
 
-**Now: per-class LP economics, attested (Jun 26–27, in progress).** Extending the
-attestation layer so each share class's economics are provable, which meant re-baselining
-the seed and re-pinning the registry and fund anchors. The suite is now ~580 tests with
-the adversarial "skeptic" reviewers 7/7 green; the work is paused at a checkpoint awaiting
-my go to merge. One honest note from the run: a reseed checkpoint hit a hard stop on a
-misread — a fund re-pin that looked like a bug turned out to be expected registry coupling,
-and the skeptic caught the misread before it became a "fix." The gated stop did exactly
-what it's there for.
+**Since then the economic engines filled in (late June).** Per-class LP economics landed and
+were attested — each share class's economics provable, replayed byte-identical — followed by
+a live multi-class fund, a re-baselining reseed, and MFN "better-of-terms" logic across classes.
+Each of these that moved an anchor got the full one-way-door treatment: my explicit go, a
+pre-planned reseed session, and triple verification.
+
+**Carried-interest attestation — published and live-verified (Jun 30 / Jul 1).** The last
+fund-economics phase for now makes carried interest provable off the attested log rather than
+a witness calculation, with the LP-facing display switched to serve the attested rows. It went
+through its one-way-door merge with my explicit go and is now published. A fresh, read-only
+verification pass then re-earned the "live-verified" badge from a clean rebuild: six
+consecutive fresh-process reproducibility runs, all five funds byte-identical to their pinned
+anchors, the full suite at **620 passing (0 failed)**, and lint clean — with one honest
+environmental caveat (the local Docker engine crashed repeatedly on the monolithic test run, so
+the suite was run per-file per the standing Windows protocol; the reproducibility core covers
+the stability concern independently).
+
+**Now: the value-creation layer's first increment — published and CI-green.** A separate,
+off-surface layer reads off the EBITDA-to-equity bridge already in the ledger — tracking
+predicted, thesis-mapped value-creation levers (an ITA-mapped "predicted add-back," paired to
+the realized bridge by hash) against what actually materializes, per portfolio company and over
+time. It's deliberately *anchor-neutral*: it builds on top of the attested surface without
+registering into it, so it ships at additive speed under a lighter review tier — and the pin
+gate confirmed it moved no anchor and touched no attested code.
+
+One honest note, in keeping with how this project treats mistakes. The increment was pushed
+before its independent pre-publish pass was run, and continuous integration went red for about
+thirteen minutes on a type-check error that the branch's own close gate hadn't caught — it ran
+the linter but not the type checker. It was fixed forward, verified locally the second time, and
+is green now, and the lesson is recorded where it belongs: the close gate must run the type
+checker too, and a "clean" self-report is a claim to verify, not to trust. The failure was
+exactly the one the skipped pre-publish pass existed to catch — which is the argument for the
+gate, made the hard way.
 
 ## Key Decisions
 
@@ -99,6 +125,13 @@ the opportunity.
 
 **Gates, not momentum.** Big phases get subdivided rather than rushed at the end of a long
 context window, and irreversible steps get their own focused, pre-planned sessions.
+
+**Match the ceremony to the blast radius.** Not every change deserves the full one-way-door
+apparatus. Work that can move an attested anchor gets heavy review and my explicit go; purely
+additive, off-surface work gets a lighter tier and ships faster. The mechanical test — does the
+attested surface change, does any anchor move — is what tells an unattended loop exactly where
+it must stop and ask for a human. That tiering rule is the safety precondition for automating
+the build itself.
 
 **Honesty as a feature.** After the adversarial review, demo claims that the code couldn't
 back were treated as bugs of the highest severity.
